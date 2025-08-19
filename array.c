@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 struct myArray
 {
@@ -8,16 +9,18 @@ struct myArray
 
 };
 
-void create(struct myArray * b, int t , int u,){
+void create(struct myArray * b, int t , int u){
     (*b).totalsize = t;
     (*b).usedsize = u;
-    int * ptr = ((int *) malloc(t* sizeof(int)) ) 
-}
+    (*b).ptr = ((int *) malloc(t* sizeof(int)) ) ;
+};
 
 
 
 int main() { 
     struct myArray marks;
-    
+    create(&marks, 10,0);
+    printf("total %d", marks.totalsize);
+
     return 0;
 } 
