@@ -15,12 +15,31 @@ void create(struct myArray * b, int t , int u){
     (*b).ptr = ((int *) malloc(t* sizeof(int)) ) ;
 };
 
+void show (struct myArray * b)
+{
+    for (int i = 0; i < ((*b).usedsize); i++ )
+    {
+         printf("the element is %d \n", (*b).ptr[i]);
+    }
 
+
+};
+
+void setValue(struct myArray * b){
+    int n;
+    for (int i = 0; i< (*b).totalsize; i++){
+        printf("enter the value");
+        scanf("%d",&n);
+        (*b).ptr[i]=n; 
+       }
+}
 
 int main() { 
     struct myArray marks;
-    create(&marks, 10,0);
-    printf("total %d", marks.totalsize);
+    create(&marks, 10,3);
+    setValue(&marks);
+    printf("total %d\n", marks.totalsize);
+    show(&marks);
 
     return 0;
 } 
