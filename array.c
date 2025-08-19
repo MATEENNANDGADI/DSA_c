@@ -27,7 +27,7 @@ void show (struct myArray * b)
 
 void setValue(struct myArray * b){
     int n;
-    for (int i = 0; i< (*b).totalsize; i++){
+    for (int i = 0; i< (*b).usedsize; i++){
         printf("enter the value");
         scanf("%d",&n);
         (*b).ptr[i]=n; 
@@ -36,10 +36,11 @@ void setValue(struct myArray * b){
 
 int main() { 
     struct myArray marks;
-    create(&marks, 10,3);
+    create(&marks, 10,4);
     setValue(&marks);
     printf("total %d\n", marks.totalsize);
     show(&marks);
+
 
     return 0;
 } 
