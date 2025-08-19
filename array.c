@@ -1,7 +1,14 @@
 #include <stdio.h>
 
+struct myArray
+{
+    int totalsize;
+    int usedsize;
+
+};
+
+
 int main() { 
-    printf(", World!\n");
-    printf("this  World nothing  !\n");
+    
     return 0;
-}
+} 
