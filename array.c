@@ -22,7 +22,6 @@ void show (struct myArray * b)
          printf("the element is %d \n", (*b).ptr[i]);
     }
 
-
 };
 
 void setValue(struct myArray * b){
