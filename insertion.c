@@ -6,16 +6,18 @@ void t(int arr[] , int n) {
     }
 };
 
-void insert(int arr) {
-    
-}
+//void insert(int arr) {
+
+
 
 
 int main() { 
     int arr[100] = {1,2,6,88};
     printf("%d\n",arr[2]);   
     t(arr , 4);
-    insertion(arr);
+    int s = sizeof(arr) / sizeof(arr[0]);
+    printf("Size of array: %d\n", s);
+//    insertion(arr);
 
   
     return 0;
