@@ -6,7 +6,16 @@ void t(int arr[] , int n) {
     }
 };
 
-//void insert(int arr) {
+void indInsertion(int arr[], int usize, int element, int s, int index) {
+    if (usize >= s) {
+        printf("full!");
+        return;  
+    }
+    for (int i = usize; i > index; i--) {
+        arr[i] = arr[i - 1];
+    }
+    arr[index] = element;
+}
 
 
 
@@ -17,7 +26,10 @@ int main() {
     t(arr , 4);
     int s = sizeof(arr) / sizeof(arr[0]);
     printf("Size of array: %d\n", s);
-//    insertion(arr);
+    int usize = 4; // current size of the array
+    int element = 5; // element to be inserted
+    int index = 5;
+    indInsertion(arr , usize , element , s , index);
 
   
     return 0;
